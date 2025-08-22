@@ -1,195 +1,103 @@
-# Système d'Enquête Policière - Prolog & React
+# Simulation d'Enquête Policière avec Prolog, React et Vite
 
-## 📋 Table des matières
-- [Système d'Enquête Policière - Prolog \& React](#système-denquête-policière---prolog--react)
-  - [📋 Table des matières](#-table-des-matières)
-  - [Introduction](#introduction)
-  - [🚀 Fonctionnalités](#-fonctionnalités)
-  - [🛠️ Technologies utilisées](#️-technologies-utilisées)
-    - [Backend](#backend)
-    - [Frontend](#frontend)
-    - [Logique Métier](#logique-métier)
-  - [📦 Installation et déploiement](#-installation-et-déploiement)
-    - [Prérequis](#prérequis)
-    - [Installation](#installation)
-- [Cloner le repository](#cloner-le-repository)
-- [Installer les dépendances backend](#installer-les-dépendances-backend)
-- [Installer les dépendances frontend](#installer-les-dépendances-frontend)
-    - [Structure du projet](#structure-du-projet)
-    - [Membres de l'équipe](#membres-de-léquipe)
-    - [Guide d'utilisation](#guide-dutilisation)
-    - [Règles Prolog](#règles-prolog)
+<img src="./home.png" alt="Enquête Policière" width="600"/>
+
+
+### Introduction
+Ce projet, développé dans le cadre d’un exercice académique (IA MI G1 IG), s’appuie sur la programmation logique avec **Prolog** pour modéliser des enquêtes judiciaires.  
+L’objectif est de déterminer la culpabilité d’un suspect selon des faits établis (motif, empreintes, présence sur la scène du crime, etc.) et des règles définies.  
+
+Le **frontend**, construit avec **React** et **Vite**, offre une interface fluide et intuitive, tandis que le **backend**, basé sur **Node.js**, exécute les requêtes Prolog pour fournir des verdicts.  
+Ce projet illustre la synergie entre IA et développement web, dans une approche éducative et ludique.
 
 ---
 
-## Introduction
-Ce projet est une application web interactive qui simule un système d'enquête policière utilisant **Prolog** comme moteur de raisonnement.  
-Développé dans le cadre du cours *Intelligence Artificielle (M1 GB 16)*, ce système permet d’analyser des crimes, d’examiner des suspects et de déterminer leur culpabilité basée sur des preuves et des règles logiques.
+### Objectif du Projet
+L’application permet de simuler une enquête en sélectionnant :
+- un **suspect**,
+- un **type de crime** (assassinat, vol ou escroquerie).  
 
-L’application combine la puissance du raisonnement symbolique de Prolog avec une interface moderne et intuitive développée avec **React**, **Vite** et **TailwindCSS**.
-
----
-
-## 🚀 Fonctionnalités
-- Gestion de multiples types de crimes : **vol, assassinat, escroquerie**  
-- Système de suspects : **5 suspects avec différents motifs et preuves**  
-- Moteur d'inférence Prolog : **détermination automatique de la culpabilité**  
-- Interface visuelle intuitive : navigation entre crimes, suspects et preuves  
-- Système de preuves détaillé : visualisation des éléments incriminants  
-- Verdict automatisé : décision basée sur les règles logiques définies  
-- Design responsive : compatible desktop et mobile  
+Les règles logiques en Prolog évaluent les faits disponibles afin de rendre un verdict clair et automatisé.  
+L’interface présente le résultat de façon visuelle et pédagogique.
 
 ---
 
-## 🛠️ Technologies utilisées
-
-### Backend
-- **Node.js** : Environnement d'exécution JavaScript  
-- **Express.js** : Framework web pour l’API REST  
-- **Tau-Prolog** : Interpréteur Prolog pour JavaScript  
-- **CORS** : Gestion des requêtes cross-origin  
-
-### Frontend
-- **React 18** : Librairie pour l’interface utilisateur  
-- **Vite** : Outil de build et développement  
-- **TailwindCSS** : Framework CSS utilitaire  
-- **Axios** : Client HTTP pour les appels API  
-
-### Logique Métier
-- **Prolog** : Langage logique pour le moteur d’inférence  
+### Fonctionnalités Principales
+- **Sélection des Suspects** : Choisissez parmi une liste de personnages (John, Mary, Alice, Bruno, Sophie).  
+- **Types de Crimes** : Évaluez différents crimes (*assassinat, vol, escroquerie*) avec leurs critères.  
+- **Verdict Automatique** : Obtenez instantanément un résultat — *Coupable* ou *Non Coupable*.  
+- **Interface Moderne** : Une UI réactive et esthétique grâce à **React**, **Vite** et **TailwindCSS**.  
 
 ---
 
-## 📦 Installation et déploiement
+### Structure du Projet
+
+#### 📂 Backend
+- Contient la logique serveur (Node.js).  
+- Le fichier principal `server.js` reçoit les requêtes du frontend, exécute Prolog via **SWI-Prolog**, puis retourne les verdicts.  
+- Assure la communication entre la logique IA et l’interface utilisateur.  
+
+#### 📂 Frontend
+- Développé avec **React + Vite**.  
+- Inclut des composants réutilisables : sélection de suspects, choix du crime, affichage des résultats.  
+- Stylisé avec **TailwindCSS** pour un rendu ergonomique et moderne.  
+
+#### 📄 investigation.pl
+- Situé dans `backend/`.  
+- Cœur de la logique IA.  
+- Définit les types de crimes, suspects, faits et règles de culpabilité.  
+- Exploité par le backend pour générer les verdicts.  
+
+---
 
 ### Prérequis
-- Node.js (v16+)  
-- npm ou yarn  
+Avant de lancer le projet, assurez-vous d’avoir installé :  
 
-### Installation
-```bash
-# Cloner le repository
-git clone <repository-url>
-cd enquete-policiere
+- [Node.js](https://nodejs.org/) (version 16 ou plus recommandée)  
+- [npm](https://www.npmjs.com/) ou [yarn](https://yarnpkg.com/)  
+- [SWI-Prolog](https://www.swi-prolog.org/) (indispensable pour exécuter les règles logiques)  
+- [Git](https://git-scm.com/) (pour cloner le dépôt)  
 
-# Installer les dépendances backend
-cd backend
-npm install
+---
 
-# Installer les dépendances frontend
-cd ../frontend
-npm install
+### Instructions pour le Professeur
+Cher professeur, vous êtes invité à :
 
-### Structure du projet
+1. **Explorer** le code source dans les dossiers `backend/` et `frontend/`.  
+2. **Tester** l’application en lançant :  
+   ```bash
+   # Lancer le backend
+   node server.js
 
-enquete-policiere/
-├── backend/
-│   ├── prolog/
-│   │   └── crime_engine.pl          # Moteur de règles Prolog
-│   ├── server.js                    # Serveur Express principal
-│   └── package.json                 # Dépendances backend
-├── frontend/
-│   ├── src/
-│   │   ├── components/              # Composants React
-│   │   │   ├── CrimeSelector.jsx
-│   │   │   ├── SuspectList.jsx
-│   │   │   ├── EvidencePanel.jsx
-│   │   │   └── VerdictPanel.jsx
-│   │   ├── hooks/
-│   │   │   └── useApi.js            # Hook API personnalisé
-│   │   ├── App.jsx                  # Composant principal
-│   │   ├── main.jsx                 # Point d’entrée React
-│   │   └── index.css                # Styles Tailwind
-│   ├── index.html
-│   ├── vite.config.js               # Config Vite
-│   ├── tailwind.config.js           # Config Tailwind
-│   └── package.json                 # Dépendances frontend
-└── README.md
+   # Lancer le frontend
+   npm run dev
+   ```
+3. **Consulter** les logs du backend pour diagnostiquer les éventuels problèmes.  
+4. **Donner un retour** via les issues ou en soumettant un pull request.  
 
-### Membres de l'équipe
+Un lien d’invitation GitHub vous a été transmis pour accéder au dépôt.  
 
-- VAZONIAINA Funny Bienvenu
--
+---
 
-### Guide d'utilisation
+### Contribution et Améliorations
+Le projet reste ouvert aux évolutions :  
+- Ajout de faits et de règles dans `investigation.pl`.  
+- Amélioration de l’interface utilisateur (statistiques, détails d’enquête, meilleure ergonomie).  
+- Optimisation du backend et gestion avancée des warnings Prolog.  
 
-1- Sélection du crime → Choisir vol, assassinat ou escroquerie
+---
 
-2- Consultation des suspects → Liste dynamique selon le crime choisi
+### Remerciements
+Un grand merci à notre professeur pour son accompagnement et son enseignement.  
+Nous avons apprécié la possibilité d’appliquer nos compétences en IA et développement web à travers ce projet enrichissant.  
 
-3- Examen des preuves → Sélectionner un suspect pour voir ses preuves
+---
 
-4- Vérification de culpabilité → Cliquer Vérifier la culpabilité
-
-5- Analyse des résultats → Verdict basé sur les règles Prolog
-
-
-### Règles Prolog
-
-
-Types de crimes
-crime_type(vol).
-crime_type(assassinat).
-crime_type(escroquerie).
-
-Suspects
-suspect(john).
-suspect(mary).
-suspect(alice).
-suspect(bruno).
-suspect(sophie).
-
-Règles de culpabilité
-
-Vol
-
-is_guilty(Suspect, vol) :-
-    has_motive(Suspect, vol),
-    was_near_crime_scene(Suspect, vol),
-    has_fingerprint_on_weapon(Suspect, vol).
-
-
-Assassinat
-
-is_guilty(Suspect, assassinat) :-
-    has_motive(Suspect, assassinat),
-    was_near_crime_scene(Suspect, assassinat),
-    (has_fingerprint_on_weapon(Suspect, assassinat);
-     eyewitness_identification(Suspect, assassinat)).
-
-
-Escroquerie
-
-is_guilty(Suspect, escroquerie) :-
-    (has_motive(Suspect, escroquerie), has_bank_transaction(Suspect, escroquerie));
-    owns_fake_identity(Suspect, escroquerie).
-
-Faits criminels
-
-Vol
-
-has_motive(john, vol).
-was_near_crime_scene(john, vol).
-has_fingerprint_on_weapon(john, vol).
-
-
-Assassinat
-
-has_motive(mary, assassinat).
-was_near_crime_scene(mary, assassinat).
-has_fingerprint_on_weapon(mary, assassinat).
-
-
-Escroquerie
-
-has_motive(alice, escroquerie).
-has_bank_transaction(alice, escroquerie).
-has_bank_transaction(bruno, escroquerie).
-owns_fake_identity(sophie, escroquerie).
-
-📞 Support
-
-Pour toute question, contactez :
-📧 equipe.enquete@projet-ia.fr
-
-⚠️ Note : Ce projet est développé à des fins éducatives (cours d’IA - M1 GB 16). Tous les personnages et scénarios sont fictifs.
+### Équipe du Projet
+- Jean Dupont  
+- Marie Leclerc  
+- Pierre Martin  
+- Sophie Dubois  
+- Luc Moreau  
+- Claire Garnier  
+- Thomas Lefèvre  
