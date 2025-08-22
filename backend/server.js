@@ -1,4 +1,3 @@
-// backend/server.js (corrigé)
 const express = require('express');
 const cors = require('cors');
 const { spawnSync } = require('child_process');
