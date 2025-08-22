@@ -94,10 +94,8 @@ Nous avons apprécié la possibilité d’appliquer nos compétences en IA et d�
 ---
 
 ### Équipe du Projet
-- VAZONIAINA Funny Bienvenu 1424 H-F
-- Marie Leclerc  
-- Pierre Martin  
-- Sophie Dubois  
-- Luc Moreau  
-- Claire Garnier  
-- Thomas Lefèvre  
+- VAZONIAINA Funny Bienvenu 1424H-F
+- HARINOMENJANAHARY Aldice 1579H-F
+- RALILAMANANJARA Mbolatiana 1568H-F
+- RANDRIAKAMAMY Fabien Elyote 1557H-F
+
