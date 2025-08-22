@@ -4,7 +4,7 @@
 
 
 ### Introduction
-Ce projet, développé dans le cadre d’un exercice académique (IA MI G1 IG), s’appuie sur la programmation logique avec **Prolog** pour modéliser des enquêtes judiciaires.  
+Ce projet, développé dans le cadre d’un exercice académique (IA MI G2 IG), s’appuie sur la programmation logique avec **Prolog** pour modéliser des enquêtes judiciaires.  
 L’objectif est de déterminer la culpabilité d’un suspect selon des faits établis (motif, empreintes, présence sur la scène du crime, etc.) et des règles définies.  
 
 Le **frontend**, construit avec **React** et **Vite**, offre une interface fluide et intuitive, tandis que le **backend**, basé sur **Node.js**, exécute les requêtes Prolog pour fournir des verdicts.  
@@ -94,7 +94,7 @@ Nous avons apprécié la possibilité d’appliquer nos compétences en IA et d�
 ---
 
 ### Équipe du Projet
-- Jean Dupont  
+- VAZONIAINA Funny Bienvenu 1424 H-F
 - Marie Leclerc  
 - Pierre Martin  
 - Sophie Dubois  
