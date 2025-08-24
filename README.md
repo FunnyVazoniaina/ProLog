@@ -99,3 +99,6 @@ Nous avons apprécié la possibilité d’appliquer nos compétences en IA et d�
 - RALILAMANANJARA Mbolatiana 1568H-F
 - RANDRIAKAMAMY Fabien Elyote 1557H-F
 - RAMADIMANDIMBY Andriamirado Constant 1428H-F
+- RAZANAMAHARO Julie Solange 1399H-F
+- TODIZARA Amoros 1461H-F 
+- RAZAFITRAHANA kevin Alfrericardo 1421H-F
