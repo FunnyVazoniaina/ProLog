@@ -57,23 +57,28 @@ Avant de lancer le projet, assurez-vous d’avoir installé :
 - [npm](https://www.npmjs.com/) ou [yarn](https://yarnpkg.com/)  
 - [SWI-Prolog](https://www.swi-prolog.org/) (indispensable pour exécuter les règles logiques)  
 - [Git](https://git-scm.com/) (pour cloner le dépôt)  
+- [Docker](https://www.docker.com/) et [Docker Compose](https://docs.docker.com/compose/) (pour l’exécution avec conteneurs)  
 
 ---
+### Exécution avec Docker
+Le projet est déjà configuré avec des **Dockerfile** pour le frontend et le backend ainsi qu’un fichier `docker-compose.yml`.  
 
 ### Instructions pour le Professeur
 Cher professeur, vous êtes invité à :
 
 1. **Explorer** le code source dans les dossiers `backend/` et `frontend/`.  
-2. **Tester** l’application en lançant :  
+2. **Construire** et **lancer** les conteneurs :
    ```bash
-   # Lancer le backend
-   node server.js
-
-   # Lancer le frontend
-   npm run dev
+   docker-compose up --build
    ```
-3. **Consulter** les logs du backend pour diagnostiquer les éventuels problèmes.  
-4. **Donner un retour** via les issues ou en soumettant un pull request.  
+3. Accéder aux services :
+
+  - Frontend (React + Vite) : http://localhost:5173
+
+  - Backend (Express + Prolog) : http://localhost:5000
+  
+4. **Consulter** les logs du backend pour diagnostiquer les éventuels problèmes.  
+5. **Donner un retour** via les issues ou en soumettant un pull request.  
 
 Un lien d’invitation GitHub vous a été transmis pour accéder au dépôt.  
 
